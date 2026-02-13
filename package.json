@@ -1,5 +1,5 @@
 {
-  "name": "/workspace",
+  "name": "cssg-admin",
   "module": "index.ts",
   "type": "module",
   "private": true,
@@ -29,9 +29,12 @@
     "format:shared": "bun run --filter @cssg/shared format",
     "format:frontend": "bun run --filter frontend format",
     "format:backend": "bun run --filter backend format",
-    "format:check": "prettier --check .",
+    "format:check:all": "bun run --filter \"*\" format:check",
     "test:all": "bun run --filter \"*\" test",
     "test:shared": "bun run --filter shared test",
-    "test:backend": "bun run --filter backend test"
+    "test:backend": "bun run --filter backend test",
+    "test:coverage": "bun run --filter \"*\" test --coverage",
+    "test:coverage:shared": "bun run --filter shared test --coverage",
+    "test:coverage:backend": "bun run --filter backend test --coverage"
   }
 }

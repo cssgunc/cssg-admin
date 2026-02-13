@@ -1,0 +1,23 @@
+name: "Main Bun project checks"
+description: "Run formatting, linting, and testing on code"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: oven-sh/setup-bun@v2
+
+    - name: Install dependencies
+      run: bun install
+      shell: bash
+
+    - name: Formatting
+      run: bun run format:check:all
+      shell: bash
+
+    - name: Linting
+      run: bun run lint:all
+      shell: bash
+
+    - name: Testing
+      run: bun run test:all
+      shell: bash

@@ -1,0 +1,20 @@
+name: CI on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run checks
+        uses: ./.github/actions/checks
+
+      - name: Security Audit
+        run: bunx bun-audit
