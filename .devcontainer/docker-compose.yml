@@ -1,12 +1,24 @@
-version: "3"
-
 services:
-    frontend:
-        build:
-            context: ..
-            dockerfile: .devcontainer/Dockerfile
-        volumes:
-            - ..:/workspace
-        command: /bin/sh -c "while sleep 1000; do :; done"
-        environment:
-            - windir # Defined on Windows but not on other platforms
+  workspace:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      - windir # Defined on Windows but not on other platforms
+
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

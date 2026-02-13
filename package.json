@@ -1,45 +1,32 @@
 {
-    "name": "cssg-admin",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "next dev --turbopack",
-        "build": "next build --turbopack",
-        "start": "next start",
-        "lint": "next lint",
-        "lint:fix": "next lint --fix",
-        "format": "prettier --write .",
-        "format:check": "prettier --check ."
-    },
-    "dependencies": {
-        "@supabase/ssr": "^0.7.0",
-        "@supabase/supabase-js": "^2.57.4",
-        "lucide-react": "^0.544.0",
-        "next": "15.5.2",
-        "react": "19.1.0",
-        "react-dom": "19.1.0"
-    },
-    "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
-        "@eslint/js": "^9.36.0",
-        "@next/eslint-plugin-next": "^15.5.4",
-        "@tailwindcss/postcss": "^4",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "@typescript-eslint/eslint-plugin": "^8.44.1",
-        "@typescript-eslint/parser": "^8.44.1",
-        "eslint": "^9.34.0",
-        "eslint-config-next": "15.5.2",
-        "eslint-config-prettier": "^10.1.8",
-        "eslint-plugin-jsx-a11y": "^6.10.2",
-        "eslint-plugin-prettier": "^5.5.4",
-        "eslint-plugin-react": "^7.37.5",
-        "eslint-plugin-react-hooks": "^5.2.0",
-        "prettier": "^3.6.2",
-        "tailwindcss": "^4",
-        "typescript": "^5"
-    },
-    "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef"
+  "name": "/workspace",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9",
+    "@types/bun": "latest",
+    "eslint": "^9",
+    "eslint-config-prettier": "^10",
+    "prettier": "^3",
+    "prettier-plugin-tailwindcss": "^0.6",
+    "typescript": "^5",
+    "typescript-eslint": "^8"
+  },
+  "scripts": {
+    "dev": "bun --filter \"*\" dev",
+    "lint:all": "bun run --filter \"*\" lint",
+    "lint:shared": "bun run --filter @cssg/shared lint",
+    "lint:backend": "bun run --filter backend lint",
+    "lint:frontend": "bun run --filter frontend lint",
+    "format:all": "bun run --filter \"*\" format",
+    "format:shared": "bun run --filter @cssg/shared format",
+    "format:frotend": "bun run --filter frontend format",
+    "format:backend": "bun run --filter backend format",
+    "format:check": "prettier --check ."
+  }
 }
