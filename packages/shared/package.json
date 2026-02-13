@@ -10,7 +10,8 @@
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "bun test"
   },
   "peerDependencies": {
     "typescript": "^5"

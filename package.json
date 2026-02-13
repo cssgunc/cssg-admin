@@ -18,7 +18,9 @@
     "typescript-eslint": "^8"
   },
   "scripts": {
-    "dev": "bun --filter \"*\" dev",
+    "dev:all": "bun --filter \"*\" dev",
+    "dev:frotnend": "bun --filter frontend dev",
+    "dev:backend": "bun --filter backend dev",
     "lint:all": "bun run --filter \"*\" lint",
     "lint:shared": "bun run --filter @cssg/shared lint",
     "lint:backend": "bun run --filter backend lint",
@@ -27,6 +29,9 @@
     "format:shared": "bun run --filter @cssg/shared format",
     "format:frotend": "bun run --filter frontend format",
     "format:backend": "bun run --filter backend format",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test:all": "bun run --filter \"*\" test",
+    "test:shared": "bun run --filter shared test",
+    "test:backend": "bun run --filter backend test"
   }
 }
