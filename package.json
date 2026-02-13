@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev:all": "bun --filter \"*\" dev",
-    "dev:frotnend": "bun --filter frontend dev",
+    "dev:frontend": "bun --filter frontend dev",
     "dev:backend": "bun --filter backend dev",
     "lint:all": "bun run --filter \"*\" lint",
     "lint:shared": "bun run --filter @cssg/shared lint",
@@ -27,7 +27,7 @@
     "lint:frontend": "bun run --filter frontend lint",
     "format:all": "bun run --filter \"*\" format",
     "format:shared": "bun run --filter @cssg/shared format",
-    "format:frotend": "bun run --filter frontend format",
+    "format:frontend": "bun run --filter frontend format",
     "format:backend": "bun run --filter backend format",
     "format:check": "prettier --check .",
     "test:all": "bun run --filter \"*\" test",
