@@ -1,5 +1,5 @@
 {
-  "name": "cssg-admin",
+  "name": "cssg-admin small change",
   "module": "index.ts",
   "type": "module",
   "private": true,
