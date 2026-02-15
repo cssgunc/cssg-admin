@@ -8,7 +8,9 @@ export default function Home() {
   const [data, setData] = useState<string>("");
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("http://localhost:8787/health");
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8787"}/health`
+      );
       const data = await res.json();
       console.log(data);
       setData(data.message);

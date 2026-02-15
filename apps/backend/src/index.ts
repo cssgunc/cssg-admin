@@ -3,15 +3,12 @@ import { cors } from "hono/cors";
 
 const app = new Hono();
 
-const NEXT_PUBLIC_PORT = Number(process.env.NEXT_PUBLIC_PORT) || 3000;
-const NEXT_PUBLIC_HOST = process.env.NEXT_PUBLIC_HOST || "localhost";
+const NEXT_PUBLIC_FRONTEND_URL = process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
 app.use(
   "/*",
   cors({
-    origin: [
-      `http${NEXT_PUBLIC_HOST === "localhost" ? "" : "s"}://${NEXT_PUBLIC_HOST}:${NEXT_PUBLIC_PORT}`,
-    ],
+    origin: [NEXT_PUBLIC_FRONTEND_URL],
     allowHeaders: ["Content-Type", "Authorization"],
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
