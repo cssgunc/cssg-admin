@@ -35,6 +35,8 @@
     "test:backend": "bun run --filter backend test",
     "test:coverage": "bun run --filter \"*\" test --coverage",
     "test:coverage:shared": "bun run --filter shared test --coverage",
-    "test:coverage:backend": "bun run --filter backend test --coverage"
+    "test:coverage:backend": "bun run --filter backend test --coverage",
+    "build:backend": "docker build -f apps/backend/Dockerfile . --tag cssg-admin-backend",
+    "docker:start:backend": "docker run -p 8787:8787 cssg-admin-backend"
   }
 }

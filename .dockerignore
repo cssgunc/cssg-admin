@@ -1,0 +1,26 @@
+# Dependencies and build output
+node_modules
+.next
+dist
+.turbo
+
+# Git and IDE
+.git
+.gitignore
+.cursor
+.vscode
+*.md
+
+# Env (mount at run instead)
+.env
+.env.*
+
+# Tests and dev
+**/*.test.ts
+**/*.test.tsx
+**/tests
+coverage
+*.log
+
+# Devcontainer (not needed in app images)
+.devcontainer

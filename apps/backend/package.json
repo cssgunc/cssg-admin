@@ -2,6 +2,7 @@
   "name": "backend",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
+    "build:prod": "mkdir -p dist && bun build src/index.ts --production --outfile dist/index.js",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
