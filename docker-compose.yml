@@ -8,6 +8,7 @@ services:
       - 8787:8787
     environment:
       - PORT=8787
+      - NEXT_PUBLIC_HOST=localhost
       - NEXT_PUBLIC_PORT=3003
   cssg-admin-frontend:
     image: cssg-admin-frontend
