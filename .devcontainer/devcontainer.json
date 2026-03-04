@@ -3,7 +3,6 @@
   "workspaceFolder": "/workspace",
   "service": "workspace",
   "remoteUser": "vscode",
-  "postCreateCommand": "sudo chown -R vscode:vscode /workspace",
   "customizations": {
     "vscode": {
       "extensions": [

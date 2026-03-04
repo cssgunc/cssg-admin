@@ -17,6 +17,7 @@ ENV NODE_ENV=production
 ENV PORT=8787
 
 COPY --from=builder /app/apps/backend/dist/index.js ./
+RUN echo "NODE_ENV=$NODE_ENV"
 
 EXPOSE 8787
 
