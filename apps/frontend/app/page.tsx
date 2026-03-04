@@ -1,6 +1,5 @@
 "use client";
 
-import test from "@cssg/shared";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -32,7 +31,7 @@ export default function Home() {
         />
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file. {test}
+            Yutian Gong
           </h1>
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             Data from backend: {data}
