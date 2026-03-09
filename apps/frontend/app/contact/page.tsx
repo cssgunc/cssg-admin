@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Contact CS + Social Good at UNC Chapel Hill for general questions, partnerships, and collaboration opportunities.",
+};
 
 export default function ContactPage() {
   return (

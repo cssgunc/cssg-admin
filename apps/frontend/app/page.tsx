@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "CS + Social Good at UNC Chapel Hill empowers students to build technology for meaningful community impact.",
+};
 
 export default function Home() {
   return (
