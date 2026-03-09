@@ -1,30 +1,13 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [data, setData] = useState<string>("");
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8787"}/health`
-      );
-      const data = await res.json();
-      console.log(data);
-      setData(data.message);
-    };
-
-    fetchData();
-  }, []);
-
   return (
-    <section className="overflow relative min-h-[calc(100vh)] bg-[radial-gradient(circle_at_center,#2f6f9f_0%,#184566_40%,#081c2e_100%)]">
+    <section className="relative min-h-[calc(100vh)] overflow-hidden bg-[radial-gradient(circle_at_center,#2f6f9f_0%,#184566_40%,#081c2e_100%)]">
       {/* soft dark edges */}
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_180px_rgba(0,0,0,0.55)]" />
 
-      <div className="relative mx-auto flex min-h-[calc(100vh)] max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
+      <div className="relative mx-auto flex min-h-[calc(100vh-72px)] max-w-6xl flex-col items-center justify-center px-6 py-20 text-center">
         <Image
           src="/cssglogo.svg"
           alt="CSSG logo"
@@ -52,6 +35,12 @@ export default function Home() {
             className="rounded-full border border-cyan-400/50 bg-cyan-400/10 px-8 py-3 text-base font-medium text-cyan-300 transition hover:bg-cyan-400/20"
           >
             About Us
+          </Link>
+          <Link
+            href="/projects"
+            className="rounded-full border border-cyan-400/30 px-8 py-3 text-base font-medium text-white/90 transition hover:border-cyan-300/60 hover:text-cyan-200"
+          >
+            View Projects
           </Link>
         </div>
       </div>
