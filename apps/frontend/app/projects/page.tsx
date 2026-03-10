@@ -6,6 +6,29 @@ export const metadata: Metadata = {
     "Explore project areas where CS + Social Good partners with organizations to deliver practical technology solutions.",
 };
 
+const projects = [
+  {
+    title: "Breast Cancer Hub",
+    description:
+      "BCH Know Your Breasts is a free mobile app developed by CS+SG in collaboration with Breast Cancer Hub. It's a tool that helps women examine their breasts and detect abnormalities, keeping track of previous examinations and providing reminders when new examinations are due. It also allows users to share their results and get actionable next-step recommendations based on reported symptoms.",
+  },
+  {
+    title: "CATCH",
+    description:
+      "A homepage and shop for CATCH (Carolina Adapts Toys for Children), a non-profit organization that provides adaptive toys to children with special needs.",
+  },
+  {
+    title: "Beautiful Together",
+    description:
+      "A website for Beautiful Together, a non-profit organization matching pets with potential adopters in a tinder style, giving animals a shot at finding their forever home.",
+  },
+  {
+    title: "Lemkin AI",
+    description:
+      "Designed and prototyped a web app for Lemkin AI, a platform allowing human rights organizations to analyze evidence, identify patterns, and make informed decisions in building cases across borders.",
+  },
+];
+
 export default function ProjectsPage() {
   return (
     <main className="relative min-h-[calc(100vh)] overflow-hidden bg-[radial-gradient(circle_at_center,#2f6f9f_0%,#184566_40%,#081c2e_100%)]">
@@ -19,37 +42,15 @@ export default function ProjectsPage() {
         </p>
 
         <section className="mt-12 grid gap-6 md:grid-cols-2">
-          <article className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6">
-            <h2 className="text-xl font-semibold text-[#63e8c7]">Nonprofit Web Platforms</h2>
-            <p className="mt-3 text-sm leading-6 text-white/80 md:text-base">
-              Student teams design and ship modern websites and dashboards so organizations can
-              better manage outreach, volunteers, and resources.
-            </p>
-          </article>
-
-          <article className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6">
-            <h2 className="text-xl font-semibold text-[#63e8c7]">Operations Tools</h2>
-            <p className="mt-3 text-sm leading-6 text-white/80 md:text-base">
-              We build internal tools that automate repetitive workflows and help partner teams
-              spend more time on mission-focused programs.
-            </p>
-          </article>
-
-          <article className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6">
-            <h2 className="text-xl font-semibold text-[#63e8c7]">Data for Social Good</h2>
-            <p className="mt-3 text-sm leading-6 text-white/80 md:text-base">
-              Our members support data collection and analytics projects that generate actionable
-              insights for community impact initiatives.
-            </p>
-          </article>
-
-          <article className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6">
-            <h2 className="text-xl font-semibold text-[#63e8c7]">Student-Led Innovation</h2>
-            <p className="mt-3 text-sm leading-6 text-white/80 md:text-base">
-              Every semester, students work in cross-functional teams to deliver scoped products
-              from discovery through launch for real-world partners.
-            </p>
-          </article>
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6"
+            >
+              <h2 className="text-xl font-semibold text-[#63e8c7]">{project.title}</h2>
+              <p className="mt-3 text-sm leading-7 text-white/80 md:text-base">{project.description}</p>
+            </article>
+          ))}
         </section>
       </div>
     </main>
