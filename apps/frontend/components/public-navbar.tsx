@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -11,8 +12,19 @@ export function PublicNavbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-[color:var(--color-border-soft)] bg-[color:var(--color-surface-900)]/90 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-        <Link href="/" className="text-base font-semibold tracking-wide text-[color:var(--color-accent)]">
-          CSSG UNC
+        <Link
+          href="/"
+          className="flex items-center"
+          aria-label="CSSG UNC home"
+        >
+          <Image
+            src="/cssglogo.svg"
+            alt="CSSG logo"
+            width={120}
+            height={44}
+            className="h-10 w-auto opacity-90 grayscale brightness-[1.85] contrast-[0.7]"
+            priority
+          />
         </Link>
 
         <div className="order-2 ml-auto flex items-center gap-2 sm:order-3 sm:ml-0 sm:gap-3">
