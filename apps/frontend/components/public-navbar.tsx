@@ -27,6 +27,18 @@ export function PublicNavbar() {
           />
         </Link>
 
+        <div className="order-3 flex w-full items-center justify-center gap-6 border-t border-white/10 pt-3 sm:order-2 sm:w-auto sm:flex-[0.72] sm:justify-evenly sm:border-t-0 sm:px-4 sm:pt-0">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-white/85 transition hover:text-[color:var(--color-accent)]"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
         <div className="order-2 ml-auto flex items-center gap-2 sm:order-3 sm:ml-0 sm:gap-3">
           <Link
             href="/login"
@@ -40,18 +52,6 @@ export function PublicNavbar() {
           >
             Sign Up
           </Link>
-        </div>
-
-        <div className="order-3 flex w-full items-center justify-center gap-5 border-t border-white/10 pt-3 sm:order-2 sm:w-auto sm:border-t-0 sm:pt-0">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-white/85 transition hover:text-[color:var(--color-accent)]"
-            >
-              {link.label}
-            </Link>
-          ))}
         </div>
       </nav>
     </header>
