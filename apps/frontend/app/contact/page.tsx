@@ -30,7 +30,11 @@ const socialLinks = [
     name: "Instagram",
     href: "https://www.instagram.com/unc_cssg/",
     icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-none stroke-current stroke-[1.8]">
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        className="h-5 w-5 fill-none stroke-current stroke-[1.8]"
+      >
         <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
         <circle cx="12" cy="12" r="4.2" />
         <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />

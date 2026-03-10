@@ -48,7 +48,9 @@ export default function ProjectsPage() {
               className="rounded-2xl border border-cyan-100/15 bg-cyan-100/5 p-6"
             >
               <h2 className="text-xl font-semibold text-[#63e8c7]">{project.title}</h2>
-              <p className="mt-3 text-sm leading-7 text-white/80 md:text-base">{project.description}</p>
+              <p className="mt-3 text-sm leading-7 text-white/80 md:text-base">
+                {project.description}
+              </p>
             </article>
           ))}
         </section>

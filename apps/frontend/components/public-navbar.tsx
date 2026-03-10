@@ -10,19 +10,15 @@ const navLinks = [
 
 export function PublicNavbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[color:var(--color-border-soft)] bg-[color:var(--color-surface-900)]/90 backdrop-blur">
+    <header className="bg-[color:var(--color-surface-900)]/90 sticky top-0 z-50 border-b border-[color:var(--color-border-soft)] backdrop-blur">
       <nav className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
-        <Link
-          href="/"
-          className="flex items-center"
-          aria-label="CSSG UNC home"
-        >
+        <Link href="/" className="flex items-center" aria-label="CSSG UNC home">
           <Image
             src="/cssglogo.svg"
             alt="CSSG logo"
             width={120}
             height={44}
-            className="h-10 w-auto opacity-90 grayscale brightness-[1.85] contrast-[0.7]"
+            className="h-10 w-auto opacity-90 brightness-[1.85] contrast-[0.7] grayscale"
             priority
           />
         </Link>
@@ -32,7 +28,7 @@ export function PublicNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/85 transition hover:text-(--color-accent)"
+              className="hover:text-(--color-accent) text-sm font-medium text-white/85 transition"
             >
               {link.label}
             </Link>
