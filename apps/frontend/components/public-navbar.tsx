@@ -32,7 +32,7 @@ export function PublicNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-white/85 transition hover:text-[color:var(--color-accent)]"
+              className="text-sm font-medium text-white/85 transition hover:text-(--color-accent)"
             >
               {link.label}
             </Link>

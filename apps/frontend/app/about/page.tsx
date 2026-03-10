@@ -45,7 +45,7 @@ export default function AboutPage() {
       <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_180px_rgba(0,0,0,0.55)]" />
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-white">
-        <section className="rounded-[2rem] border border-cyan-100/15 bg-white/92 px-6 py-10 text-slate-900 shadow-[0_25px_90px_rgba(4,18,33,0.22)] md:px-12 md:py-14">
+        <section className="rounded-4xl border border-cyan-100/15 bg-white/92 px-6 py-10 text-slate-900 shadow-[0_25px_90px_rgba(4,18,33,0.22)] md:px-12 md:py-14">
           <h1 className="font-mono text-2xl font-bold tracking-tight md:text-3xl">Our Goals</h1>
 
           <div className="mt-10 space-y-8 md:space-y-10">
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 key={goal}
                 className="grid gap-3 md:grid-cols-[72px_1fr] md:items-start md:gap-10"
               >
-                <div className="text-3xl font-bold leading-none text-[color:var(--color-accent)] md:text-5xl">
+                <div className="text-3xl font-bold leading-none text-(--color-accent) md:text-5xl">
                   {index + 1}
                 </div>
                 <p className="max-w-4xl text-base leading-8 text-slate-900 md:text-[1.45rem] md:leading-[1.45]">
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
         <div className="mx-auto my-8 h-10 w-full max-w-6xl rounded-full bg-[linear-gradient(90deg,#173654_0%,#245c83_50%,#173654_100%)] opacity-95" />
 
-        <section className="rounded-[2rem] border border-cyan-100/15 bg-white/92 px-6 py-10 text-slate-900 shadow-[0_25px_90px_rgba(4,18,33,0.22)] md:px-12 md:py-14">
+        <section className="rounded-4xl border border-cyan-100/15 bg-white/92 px-6 py-10 text-slate-900 shadow-[0_25px_90px_rgba(4,18,33,0.22)] md:px-12 md:py-14">
           <h2 className="font-mono text-2xl font-bold tracking-tight md:text-3xl">Our Structure</h2>
           <p className="mt-4 max-w-3xl text-sm text-slate-500 md:text-lg">
             CS+SG is comprised of a variety of components, each with a unique focus.
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 className="flex h-full flex-col items-center rounded-3xl border border-slate-200 bg-white px-6 py-8 text-center shadow-[0_18px_40px_rgba(15,23,42,0.08)]"
               >
                 <h3 className="text-xl font-medium text-slate-950">{item.title}</h3>
-                <div className="mt-4 text-xl font-bold uppercase tracking-wide text-[color:var(--color-accent)]">
+                <div className="mt-4 text-xl font-bold uppercase tracking-wide text-(--color-accent)">
                   {item.icon}
                 </div>
                 <p className="mt-5 text-sm leading-7 text-slate-500 md:text-base">{item.description}</p>
