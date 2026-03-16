@@ -1,0 +1,25 @@
+name: "Trigger webhook"
+description: "Send a POST request to a webhook URL"
+
+inputs:
+  webhook_url:
+    description: "Webhook endpoint URL"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Validate webhook URL input
+      shell: bash
+      run: |
+        if [ -z "${{ inputs.webhook_url }}" ]; then
+          echo "Missing required input: webhook_url"
+          exit 1
+        fi
+
+    - name: Send webhook POST request
+      shell: bash
+      run: |
+        curl --fail --show-error --silent \
+          --request POST \
+          "${{ inputs.webhook_url }}"

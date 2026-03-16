@@ -1,0 +1,26 @@
+name: Trigger OpenShift Auto Builds
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger_build_webhooks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Trigger backend build webhook
+        uses: ./.github/actions/trigger-webhook
+        with:
+          webhook_url: ${{ secrets.OPENSHIFT_BACKEND_WEBHOOK_URL }}
+
+      - name: Trigger frontend build webhook
+        uses: ./.github/actions/trigger-webhook
+        with:
+          webhook_url: ${{ secrets.OPENSHIFT_FRONTEND_WEBHOOK_URL }}
